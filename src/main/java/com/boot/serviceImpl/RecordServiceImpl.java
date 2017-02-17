@@ -3,6 +3,7 @@ package com.boot.serviceImpl;
 import com.boot.mapper.RecordMapper;
 import com.boot.pojo.Record;
 import com.boot.service.RecordService;
+import com.sun.org.apache.xml.internal.resolver.helpers.FileURL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.util.List;
  */
 @Service
 public class RecordServiceImpl implements RecordService{
+
    @Autowired
    RecordMapper recordMapper;
 
@@ -48,6 +50,16 @@ public class RecordServiceImpl implements RecordService{
 
     public String getCommentsById(int id) {
         return recordMapper.getCommentsById(id);
+    }
+
+    @Override
+    public String getFileUrlById(int id) {
+        return recordMapper.getFileUrlById(id);
+    }
+
+    @Override
+    public List<String> getFileUrl(String fileUrl) {
+        return recordMapper.getFileUrl(fileUrl);
     }
 
 

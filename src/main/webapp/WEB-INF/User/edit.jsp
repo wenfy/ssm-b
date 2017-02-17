@@ -11,32 +11,7 @@
 <head>
     <base href="../">
     <script type="text/javascript" src="js/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="js/layer/layer.js"></script>
-    <script  type="text/javascript"  src="js/H-ui.js"></script>
-    <script  type="text/javascript"   src="js/H-ui.admin.js"></script>
-
-
     <script>
-        $(document).ready(function() {
-            $("#input1").blur(function () {
-                var data = $(".f1").serializeArray();
-                $.ajax({
-                    url: "User/na",
-                    type: "post",
-                    data: data,
-                    dataType: "josn",
-                    success: function (josn) {
-                        if (josn.status > 0) {
-                            alert("该账户已注册");
-                        } else {
-                            alert("该账户可以使用");
-                        }
-                    }
-                });
-
-            });
-        });
     </script>
 
 </head>

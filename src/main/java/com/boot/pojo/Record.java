@@ -10,17 +10,19 @@ public class Record {
     private Integer userid;
     private String username;
     private String comments;
+    private String fileUrl;
 
     public Record() {
     }
 
-    public Record(Integer id, String name, String data, Integer userid, String username, String comments) {
+    public Record(Integer id, String name, String data, Integer userid, String username, String comments,String fileUrl) {
         this.id = id;
         this.name = name;
         this.data = data;
         this.userid = userid;
         this.username = username;
         this.comments = comments;
+        this.fileUrl = fileUrl;
     }
 
     public Integer getId() {
@@ -69,5 +71,13 @@ public class Record {
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    public String getFileUrl() {
+        return fileUrl;
+    }
+
+    public void setFileUrl(String fileUrl) {
+        this.fileUrl = fileUrl;
     }
 }

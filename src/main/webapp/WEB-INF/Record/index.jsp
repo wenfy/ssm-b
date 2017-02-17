@@ -9,13 +9,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
+    <base href="../">
     <script type="text/javascript" src="js/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="js/layer/layer.js"></script>
-    <script  type="text/javascript"  src="js/H-ui.js"></script>
-    <script  type="text/javascript"   src="js/H-ui.admin.js"></script>
+    <style>
+        #a2{margin-left: 1300px;margin-top: 2px}
+    </style>
 </head>
 <body>
+<a id="a2" href="http://localhost:8080/login">退出</a>
 <table border="2" >
     <thead>
     <tr>
@@ -30,8 +31,8 @@
             <td >${row.name}</td>
             <td >${row.data}</td>
             <td >
-               <a href="../Record/edit?id=${row.id}">修改</a>|
-                <a href="../Record/look?id=${row.id}">查看内容</a>
+                <a href="../Record/look?id=${row.id}">查看内容</a>||
+               <a href="../Record/delete?id=${row.id}">删除</a>
             </td>
 
         </tr>

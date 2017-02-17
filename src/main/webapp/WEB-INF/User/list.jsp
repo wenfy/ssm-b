@@ -11,12 +11,9 @@
 <head>
     <base href="../">
     <script type="text/javascript" src="js/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="js/layer/layer.js"></script>
-    <script  type="text/javascript"  src="js/H-ui.js"></script>
-    <script  type="text/javascript"   src="js/H-ui.admin.js"></script>
 <style>
-    #a1{margin-left: 1000px;margin-top: 2px}
+    #a1{margin-left: 950px;margin-top: 2px}
+    #a2{margin-left: 20px;margin-top: 2px}
 </style>
 </head>
 <body>
@@ -27,6 +24,7 @@
     <button type="submit">查询</button>
 </form>
 <a id="a1" href="http://localhost:8080/User/add">注册新用户</a>
+    <a id="a2" href="http://localhost:8080/login">退出</a>
 </table>
 <table border="2" >
     <thead>
@@ -45,7 +43,7 @@
             <td >${row.data}</td>
             <td >
                 <!--   <a href="javascript:openedit(${row.id});">修改</a>  -->
-                <a href="./Record/look2?id=${row.id}">查看内容</a>
+                <a href="./Record/look?id=${row.id}">查看内容</a>
             </td>
 
         </tr>

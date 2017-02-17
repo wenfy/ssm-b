@@ -11,16 +11,18 @@
 <head>
     <base href="../">
     <script type="text/javascript" src="js/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/laydate/laydate.js"></script>
-    <script type="text/javascript" src="js/layer/layer.js"></script>
-    <script  type="text/javascript"  src="js/H-ui.js"></script>
-    <script  type="text/javascript"   src="js/H-ui.admin.js"></script>
-    <style>
-
-    </style>
+    <script>
+        function getUrl() {
+            var url=document.getElementById("a").innerText;
+            location.href="Record/urlSearch?fileUrl="+url;
+        }
+    </script>
 </head>
 <body>
-<span class="span" name="comments">${requestScope.clist}</span><br>
+<span class="span" name="comments">${requestScope.cList}</span><br>
+<c:forEach items="${requestScope.nameList}" var="file" varStatus="r">
+    <a id="a" href="javascript:getUrl()">${file}</a><br>
+</c:forEach>
 <a href="http://localhost:8080/Record/index2">返回</a>
 </body>
 </html>

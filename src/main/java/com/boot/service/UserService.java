@@ -8,11 +8,11 @@ import java.util.List;
  * Created by w-fy on 2017/1/24.
  */
 public interface UserService {
-    public List<User> getAll();
-    public  User getUser(User user);
-    public void insert(User user);
-    public void update(int id);
-    public void delete(int id);
-    public List getAllName();
-    public User getById(int id);
+     List<User> getAll();
+     User getUser(User user);
+     void insert(User user);
+     void update(int id);
+    void delete(int id);
+    List getAllName();
+     User getById(int id);
 }
